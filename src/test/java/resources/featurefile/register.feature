@@ -5,7 +5,7 @@ Feature: Register
     When I click on Register link
     Then I verify Register Text
 
-  Scenario: User should create account successfully
+  Scenario: Verify that first name, Last name, email address and confirm password fields are mandatory
     Given I am on Home Page
     When I click on Register link
     And I click on Register Button

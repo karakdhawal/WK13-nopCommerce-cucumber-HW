@@ -9,10 +9,10 @@ Feature: Login Test
   Scenario: Verify the error message with invalid credentials
     Given I am on Home Page
     When I click on login link
-    And I enter email "lorduk1@gmail.com"
-    And I enter password "123456"
+    And I enter email "lordukg1@gmail.com"
+    And I enter password "1234563"
     And I click on login button
-    Then I should see the error "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found"
+    Then I should see the error "Login was unsuccessful. Please correct the errors and try again. No customer account found"
 
   Scenario: Verify that User should login with valid credentials
     Given I am on Home Page

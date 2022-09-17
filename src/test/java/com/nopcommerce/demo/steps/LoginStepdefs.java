@@ -98,6 +98,7 @@ public class LoginStepdefs {
     public void iShouldSeeTheError(String message){
         String errorMessage = new LoginPage().getErrorMessage();
     //    String message = "Login was unsuccessful. Please correct the errors and try again.\\nNo customer account found";
-        Assert.assertEquals(message, errorMessage);
+        Assert.assertEquals(errorMessage, "Login was unsuccessful. Please correct the errors and try again.\n" +
+                "No customer account found");
     }
 }

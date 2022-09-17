@@ -1,5 +1,6 @@
 package com.nopcommerce.demo.steps;
 
+import com.nopcommerce.demo.pages.BuildYourOwnComputerPage;
 import com.nopcommerce.demo.pages.ComputerPage;
 import com.nopcommerce.demo.pages.DesktopsPage;
 import cucumber.api.PendingException;
@@ -36,39 +37,39 @@ public class computerStepdefs {
     }
 
     @And("^I select Processor \"([^\"]*)\"$")
-    public void iSelectProcessor(String arg0){
+    public void iSelectProcessor(String processor){
+        new BuildYourOwnComputerPage().selectProcessor(processor);
 
     }
 
     @And("^I select RAM \"([^\"]*)\"$")
-    public void iSelectRAM(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void iSelectRAM(String ram){
+        new BuildYourOwnComputerPage().selectRam(ram);
     }
 
     @And("^I select HDD \"([^\"]*)\"$")
-    public void iSelectHDD(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void iSelectHDD(String HDD) throws InterruptedException {
+        new BuildYourOwnComputerPage().selectHDD(HDD);
     }
 
     @And("^I select OS \"([^\"]*)\"$")
-    public void iSelectOS(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void iSelectOS(String os) throws InterruptedException {
+        new BuildYourOwnComputerPage().selectOS(os);
     }
 
     @And("^I select Software \"([^\"]*)\"$")
-    public void iSelectSoftware(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void iSelectSoftware(String software) throws InterruptedException {
+        new BuildYourOwnComputerPage().selectSoftware(software);
     }
 
     @And("^I click on Add to Cart button$")
     public void iClickOnAddToCartButton() {
+        new BuildYourOwnComputerPage().clickOnAddToCartButton();
     }
 
     @Then("^I verify message the Product has been added to your shopping cart$")
     public void iVerifyMessageTheProductHasBeenAddedToYourShoppingCart() {
+        String actualMes = new BuildYourOwnComputerPage().verifyMesTheProductHasBeenAddedToYourShoppingCart();
+        Assert.assertEquals(actualMes, "The product has been added to your shopping cart");
     }
 }

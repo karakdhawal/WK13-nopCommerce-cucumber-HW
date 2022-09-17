@@ -92,7 +92,7 @@ public class RegisterPage extends Utility {
         sendTextToElement(password, "123456");
     }
     public void enterEmail (){
-        sendTextToElement(email, "lorduk1@gmail.com");
+        sendTextToElement(email, "lorduk@gmail.com");
     }
 
     public void selectYear (){

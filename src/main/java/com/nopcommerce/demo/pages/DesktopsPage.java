@@ -20,7 +20,7 @@ public class DesktopsPage extends Utility {
     WebElement desktopText;
 
     @CacheLookup
-    @FindBy (xpath = "//div[@class='products-wrapper']/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/img")
+    @FindBy (xpath = "//div[@class='products-wrapper']/div[1]/div[1]/div[1]/div[1]/div[2]/h2[1]/a[1]")
     WebElement buildYourOwnComputer;
 
     public void clickonBuildYourOwnComputer (){
